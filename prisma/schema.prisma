@@ -1,16 +1,16 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"  // SQLite banco de dados
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
-}
-
 model Livro {
-  id         Int      @id @default(autoincrement())
-  titulo     String
-  autor      String
+  id            Int    @id @default(autoincrement())
+  titulo        String
+  autor         String
   anoPublicacao Int
-  genero     String
+  genero        String
 }
